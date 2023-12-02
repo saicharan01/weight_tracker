@@ -57,7 +57,7 @@ def update_data(file_path, new_data):
         
 
 def update_page():
-    st.title("Update Weight Data")
+    st.title("Update you latest Weight")
 
     file_path = 'weight.json'
     data = load_data(file_path)
