@@ -1,7 +1,27 @@
 [
     {
-        "Name": "Sai Charan Reddy",
+        "Name": "DEMO",
         "date": "2023-12-02",
-        "weight": 104.35
+        "weight": 60
+    },
+     {
+        "Name": "DEMO",
+        "date": "2023-11-25",
+        "weight": 70
+    },
+     {
+        "Name": "DEMO",
+        "date": "2023-11-18",
+        "weight": 60
+    },
+     {
+        "Name": "DEMO",
+        "date": "2023-11-11",
+        "weight": 60
+    },
+     {
+        "Name": "DEMO",
+        "date": "2023-11-04",
+        "weight": 60
     }
 ]
