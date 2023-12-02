@@ -119,7 +119,6 @@ def you_details():
         selected_password = selected_row.iloc[0]['password']
         if selected_password==password:
             df_selected = df[df["Name"] == selected_name]
-            st.write(df_selected)
             detail_about_your_weight(df_selected)
         else:
             st.error("Please enter correct Details")
