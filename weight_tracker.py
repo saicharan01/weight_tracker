@@ -4,8 +4,7 @@ import json
 import datetime
 import plotly.express as px
 
-def detail_about_your_weight(df):
-    st.write(df)
+st.write(df)
     # Ensure 'date' column is in datetime format
     df['date'] = pd.to_datetime(df['date'])
 
@@ -30,7 +29,13 @@ def detail_about_your_weight(df):
                 st.write(f"Weight has decreased by {-weight_change:.2f} units.")
                 st.write(f"This is a {-percentage_change:.2f}% decrease since the second last record.")
         else:
-            st.write("Weight remains unchanged.")
+            st.write("Weight remains unchanged")
+        
+        # Plotting weekly weight trend
+        weekly_trend = df.resample('W-Mon', on='date').mean().reset_index()  # Weekly average weight
+        fig = px.line(weekly_trend, x='date', y='weight', title='Weekly Weight Trend')
+        st.plotly_chart(fig)
+
     else:
         st.write("Insufficient data to calculate weight change for the last two days.")
 
@@ -80,8 +85,7 @@ def update_page():
         name = selected_name
 
     latest_weight = st.number_input("Enter your latest weight", value=None, placeholder="Type a number...")
-    #current_date = datetime.date.today()
-    current_date="2023-10-02"
+    current_date = datetime.date.today()
     if st.button("Update"):
         if latest_weight is not None and name != "":
             new_data = {
