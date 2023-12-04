@@ -4,7 +4,8 @@ import json
 import datetime
 import plotly.express as px
 
-st.write(df)
+def detail_about_your_weight(df):
+    st.write(df)
     # Ensure 'date' column is in datetime format
     df['date'] = pd.to_datetime(df['date'])
 
